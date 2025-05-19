@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Clone Showcase with Auto-Playing Videos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Equal columns for text and videos */
+            max-width: 1200px;
+            width: 95%;
+        }
+
+        .project-description {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .project-description h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+
+        .project-description p {
+            line-height: 1.7;
+            margin-bottom: 25px;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .project-description ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .project-description ul li {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-description ul li::before {
+            content: '✓';
+            color: #28a745;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .video-gallery {
+            display: flex;
+            flex-direction: column; /* Videos arranged vertically */
+            gap: 15px;
+            padding: 25px;
+            background-color: #f0f0f0;
+            align-items: center; /* Center videos horizontally */
+            overflow-y: auto; /* Enable vertical scrolling if many videos */
+            max-height: 600px; /* Optional: Limit vertical height */
+        }
+
+        .video-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            width: 80%; /* Adjust video width within the gallery */
+            max-width: 500px; /* Limit maximum video width */
+            height: auto;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 960px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .project-description {
+                padding: 30px;
+                align-items: center;
+                text-align: center;
+            }
+            .video-gallery {
+                padding: 20px;
+                max-height: none; /* Remove vertical height limit on smaller screens */
+            }
+            .video-item {
+                width: 90%; /* Adjust video width on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="project-description">
+            <h2>Web Clone Project Demonstrations</h2>
+            <p>Watch demonstrations of my web clone projects, created to enhance my HTML and CSS skills. These videos showcase the functionality and design of clones like Myntra, Netflix, and Amazon, playing automatically and continuously.</p>
+
+            <h3>Project Demos:</h3>
+            <ul>
+                <li>Myntra Clone: Demonstration of the e-commerce interface.</li>
+                <li>Netflix Clone: Showcase of the streaming platform's layout and navigation.</li>
+                <li>Amazon Clone: Demonstration of the online marketplace structure.</li>
+            </ul>
+
+            <p>The videos on the right will play automatically and loop to continuously display the functionality of each web clone.</p>
+        </div>
+        <div class="video-gallery">
+            <div class="video-item">
+                <video src="project_vds/myntra.mp4" autoplay loop muted></video>
+            </div>
+            <div class="video-item">
+                <video src="project_vds/netflix.mp4" autoplay loop muted></video>
+            </div>
+            <div class="video-item">
+                <video src="project_vds/amazon.mp4" autoplay loop muted></video>
+            </div>
+            </div>
+    </div>
+</body>
+</html>

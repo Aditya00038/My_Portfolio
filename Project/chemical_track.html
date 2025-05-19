@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Resource Management Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 0;
+            height: 100vh;
+        }
+
+        .project-description {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            height: 100%;
+            /* overflow-y: auto;  Removed overflow-y: auto */
+        }
+
+        .project-description h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .project-description p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #555;
+            font-size: 1.2em;
+        }
+
+        .project-description ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .project-description ul li {
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-description ul li::before {
+            content: '✓';
+            color: #28a745;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        .video-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 25px;
+            background-color: #f0f0f0;
+            align-items: center;
+            /* overflow-y: auto; Removed overflow-y: auto */
+            max-height: 100%;
+            border-left: 1px solid #ddd;
+        }
+
+        .video-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 95%;
+            max-width: 700px;
+            height: auto;
+            background-color: #fff;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 960px) {
+            .container {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .project-description {
+                padding: 30px;
+                align-items: center;
+                text-align: center;
+                height: auto;
+                overflow-y: auto; /* added back scroll for smaller screens if needed*/
+            }
+            .project-description h2{
+               font-size: 2.2em;
+            }
+            .project-description p{
+                font-size: 1.1em;
+            }
+            .project-description ul li{
+                font-size: 1.1em;
+            }
+            .video-gallery {
+                padding: 20px;
+                max-height: none;
+                border-top: none;
+                border-left: none;
+            }
+            .video-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px){
+           .project-description {
+             padding: 20px;
+           }
+           .project-description h2{
+             font-size: 2em;
+           }
+           .project-description p{
+             font-size: 1em;
+           }
+           .project-description ul li{
+                font-size: 1em;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="project-description">
+            <h2>Chemistry Resource Management Tool</h2>
+            <p>This tool assists chemistry faculty with lab resource management, chemical usage, and reporting.  It streamlines lab operations and improves data management.</p>
+
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Chemical Inventory Management</li>
+                <li>Molecular Weight & Formula Search</li>
+                <li>Usage Tracking</li>
+                <li>Report Generation</li>
+                <li>User Authentication</li>
+            </ul>
+
+            <h3>Technologies:</h3>
+            <ul>
+                <li>Frontend: HTML, CSS, JavaScript</li>
+                <li>Backend: Firebase</li>
+            </ul>
+
+        </div>
+        <div class="video-gallery">
+            <div class="video-item">
+                <video src="project_vds/chemical_track.mp4" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
